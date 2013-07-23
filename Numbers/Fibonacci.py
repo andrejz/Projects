@@ -1,3 +1,6 @@
+#Calculates either the Nth fibonacci number or calculates which Fibonacci number is smaller than a given number
+
+
 def fibonacci_n(num):
     if num == 1:
         return 0
