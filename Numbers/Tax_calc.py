@@ -1,0 +1,13 @@
+#Tax calculator
+
+def calc_tax(raw, tax):
+    t_p = raw * tax/100
+    t_total = raw + t_p
+    return t_p, t_total
+e = []
+while len(e) != 2:
+    entry = raw_input("Enter the raw cost and tax in percentages, seperated by a comma (example 134455, 32.3): ")
+    e = entry.split(",")
+
+result = calc_tax(float(e[0]), float(e[1]))
+print "Tax is {0}, and the total price is {1}".format(result[0], result[1])
