@@ -40,7 +40,7 @@ def calculation(calc, operacije, stevilke): #Performes all the calculations in s
                             "-" : subtraction(float(stevilke[i]), float(stevilke[i+1]))}
             
             if operacije[i] == calc:
-                nove_stevilke.append(seznam_operacij[calc]) #TREBA JE DODATI ŠE ZADNJI ČLEN PRI ŠTEVILKAH IN ZAGOTOVITI, DA SE ENA ŠTEVILKA OPERACIJI PO IZBRIŠE
+                nove_stevilke.append(seznam_operacij[calc]) #TREBA JE DODATI ŠE ZADNJI ČLEN PRI ŠTEVILKAH IN ZAGOTOVITI, DA SE ENA ŠTEVILKA IZBRI
             else:
                 nove_stevilke.append(stevilke[i])
                 nove_operacije.append(operacije[i])
