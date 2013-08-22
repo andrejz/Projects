@@ -1,0 +1,36 @@
+#Credit card validator
+import sys
+
+entry = raw_input("Please enter a credit card number you want to check: ")
+if len(entry) < 15:
+    print "Credit card number is not valid (too short)."
+    sys.exit(0)
+
+number = []
+for i in range(0, len(entry)):
+    try:
+        number.append(int(entry[i]))
+    except ValueError:
+        print "You've enetred non numberic values. Credit card is not valid"
+        sys.exit(0)
+
+d_number = []
+a = len(number) % 2
+for i in range(0, len(number)):
+    if a == i%2:
+        d_number.append(2*number[i])
+    else:
+        d_number.append(number[i])        
+for i in range(0, len(d_number)):
+    if d_number[i] > 10:
+        d_number[i] = d_number[i] % 10 + 1
+
+vsota = 0
+for i in range(0, len(d_number) - 1):
+    vsota = vsota + d_number[i]
+
+check = (vsota * 9) % 10
+if check == d_number[-1]:
+    print "Credit card number is valid."
+else:
+    print "Credit card number is NOT valid."
