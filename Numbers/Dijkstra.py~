@@ -1,0 +1,6 @@
+#An implementation of Dikstra's algorithm.
+
+#Idea for a design of data[[A, [[B, 3], [C, 2], [D, 7]], B [[A, 3], 
+#What needs to be done:
+#Determine if index has not been visited.
+
